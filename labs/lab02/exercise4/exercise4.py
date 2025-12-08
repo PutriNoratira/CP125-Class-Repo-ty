@@ -14,6 +14,14 @@ def get_hourly_rate(vehicle_type, hour_24):
         return rate
     elif vehicle_type == "hybrid":
         if hour_24 <= 6 or hour_24 >= 22:
+            rate = low_rate * hour_24
+            return rate
+        else:
+            rate = high_rate * hour_24
+            return rate
+    else:
+        rate = high_rate * hour_24
+        return rate
 
 # Test your code here
-print("Testing Dynamic Parking Rate...")
+print ("Testing Dynamic Parking Rate...")
