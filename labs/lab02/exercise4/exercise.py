@@ -4,7 +4,16 @@
 def get_hourly_rate(vehicle_type, hour_24):
     # TODO: Implement this function
     # Return hourly rate based on vehicle and time
-    pass
+    low_rate = 2.00
+    high_rate = 5.00
+
+    vehicle_type = vehicle_type.lower()
+
+    if vehicle_type == "electric":
+        rate = low_rate * hour_24
+        return rate
+    elif vehicle_type == "hybrid":
+        if hour_24 <= 6 or hour_24 >= 22:
 
 # Test your code here
 print("Testing Dynamic Parking Rate...")

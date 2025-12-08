@@ -4,7 +4,12 @@
 def validate_entry(name, pin):
     # TODO: Implement this function
     # Return True if valid, False otherwise
-    pass
+    director = (name == "Director" and pin == 1122)
+    security = (name == "Security" and pin == 9900)
+
+    access = director or security
+
+    return access
 
 # Test your code here
 print("Testing Secure Vault System...")
