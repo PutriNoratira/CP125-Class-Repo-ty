@@ -1,8 +1,10 @@
 ''' 
     My name is Tira.
     The problem that I need to solve is to create a function
-    that will let the user input the mark and return the grade
+    that will let the user input the mark and return the grade.
+    Hence, it will print the mark and the grade.
 '''
+
 def determine_grade (mark):
     if mark >= 80:
         grade = "A"
