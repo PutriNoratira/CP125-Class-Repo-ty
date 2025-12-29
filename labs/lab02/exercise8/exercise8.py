@@ -22,11 +22,19 @@ def calculate_bounce_count(initial_height):
         current_height = calculate_bounce_height(current_height)
         if is_ball_stopped(current_height):
             break
-         
-    
+        count += 1
+    return count
 
 def calculate_total_distance(initial_height):
     """
     Calculate total distance traveled.
     """
-    
+    distance = initial_height
+    current_height = initial_height
+
+    while True:
+        current_height = calculate_bounce_count(current_height)
+        if is_ball_stopped (current_height):
+            break
+        distance += (current_height * 2)
+    return distance
