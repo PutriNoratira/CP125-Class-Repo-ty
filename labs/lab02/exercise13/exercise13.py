@@ -5,7 +5,7 @@ def get_rate_per_kg(destination):
     """
     if destination == "International":
         return 15.00
-    else:
+    elif destination == "Domestic" :
         return 5.00
     
 def get_express_charge(is_express):
