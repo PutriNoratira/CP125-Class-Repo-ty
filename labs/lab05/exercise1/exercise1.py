@@ -5,8 +5,8 @@ def was_backward_detected(waypoints):
     Use tuple unpacking.
     """
     for i in range (1, len(waypoints)):
-        prev_x, prev_y, = waypoints[i-1]
-        cur_x, cur_y, = waypoints[i]
+        prev_x, prev_y, prev_z = waypoints[i-1]
+        cur_x, cur_y, cur_z = waypoints[i]
 
         if (cur_x < prev_x) or (cur_y < prev_y):
             return True
