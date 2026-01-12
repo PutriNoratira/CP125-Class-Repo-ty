@@ -1,9 +1,14 @@
-
-
 def find_momentum_days(prices):
-    
-    pass
+    momentum_indices = []
 
+    for i in range (2, len(prices)):
+        current_increase = prices[i] - prices [i-1]
+        before_increase = prices [i-1] - prices [i-2]
+
+        if (current_increase > 0) and (current_increase > before_increase):
+            momentum_indices.append(i)
+    
+    return momentum_indices
 
 # Test
 prices = [100, 102, 105, 107, 106, 108, 112, 114]
