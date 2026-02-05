@@ -1,22 +1,38 @@
-def main():
-    # 1. Variables and Data Types: Use a list to store integers
-    numbers = []
-    
-    # 2. Control Structures: Loop for 5 inputs
-    for i in range(1, 6):
-        val = int(input(f"Enter number {i}: "))
-        numbers.append(val)
-    
-    # 3. Functionality: Sort the list (Ascending)
-    numbers.sort()
-    print(f"Numbers in ascending order: {numbers}")
-    
-    # 3. Functionality: Calculate Sum
-    total_sum = sum(numbers)
-    print(f"Sum of all numbers: {total_sum}")
-    
-    # 3. Functionality: Find Largest
-    largest = max(numbers)
-    print(f"Largest number: {largest}")
+'''
+    My name is Tira.
+    This program is written to sort, sum and find mx value of 5 
+    numbers that are inserted by the user in ascending order. 
+    I will be using list for keeping all the numbers inserted 
+    by the user. Only then I'll be using built-in function 
+    to sort, sum and find the max value
+'''
 
-main()
+def number_modifier(numbers):
+    '''
+    This function is to sort. calculate sum and find the
+    highest value based on the number inserted by the user.
+    '''
+    numbers.sort()
+    print (f"Numbers in ascending order: {numbers}")
+
+    sum_numbers = sum(numbers)
+    print (f"Sum of all numbers: {sum_numbers}")
+
+    max_numbers = max(numbers)
+    print (f"Largest number: {max_numbers}")
+
+def number_input():
+    '''
+    This function is for the user to insert their 5 numbers.
+    By using counter-controlled loop, it will ensure that the
+    user only insert 5 numbers then it will process the numbers.
+    '''
+    numbers = []
+
+    for i in range (1,6):
+        number = int(input(f"Enter number {i}:"))
+        numbers.append (number)
+    
+    number_modifier(numbers)
+
+number_input()
