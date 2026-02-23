@@ -2,7 +2,8 @@ student = {
     "name": "Ali",
     "age": 20,
     "course": "Computer Science",
-    "grade": "A"
+    "grade": "A",
+    "class": "T01"
 }
 
 # 1. Access by key
