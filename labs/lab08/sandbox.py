@@ -13,10 +13,34 @@ print("Scores:", scores)'''
 '''print (scores)'''
 
 # Write scores to a file
-f = open("labs/lab08/data/scores.txt", "w")
+'''f = open("labs/lab08/data/scores.txt", "w")
 f.write("85\n")
 f.write("92\n")
 f.write("78\n")
 f.close()
 
-print("Scores saved to file!")
+print("Scores saved to file!")'''
+
+# Read scores from the file
+'''f = open("labs/lab08/data/scores.txt", "r")
+data = f.read()
+print(data)
+f.close()'''
+
+# Read
+f = open("labs/lab08/data/scores.txt", "r")
+lines = f.readlines()
+f.close()
+
+# Process
+scores = []
+for line in lines:
+    score = int(line.strip())
+    scores.append(score)
+
+average = sum(scores) / len(scores)
+
+# Write
+f = open("labs/lab08/data/report.txt", "w")
+f.write(f"Average: {average}\n")
+f.close()
