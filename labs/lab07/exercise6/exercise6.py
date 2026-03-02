@@ -1,5 +1,5 @@
 def merge_results(existing, new_results):
-    for student, score in new_results:
+    for student, score in new_results.items():
         if student in existing:
             if score > existing[student]:
                 existing[student] = score
@@ -7,14 +7,13 @@ def merge_results(existing, new_results):
             existing[student] = score
     return existing
 
-
 def get_passing_students(scores, pass_mark):
     passing = []
     for student in scores:
         if scores[student] >= pass_mark:
-            passing.append(scores[student])
+            passing.append(student)
+    
     return sorted(passing)
-
 
 if __name__ == "__main__":
     existing = {"Ali": 85, "Sara": 70}
@@ -22,4 +21,4 @@ if __name__ == "__main__":
 
     merged = merge_results(existing, new_results)
     print(merged)
-    print(get_passing_students(merged, 75))
+    print(get_passing_students(merged, 70))
