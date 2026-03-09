@@ -21,23 +21,18 @@ def calculate_final_grades(input_file, output_file):
     
     reader = csv.reader(infile)
     writer = csv.writer(outfile)
+
+    next(reader)
     
     writer.writerow(["student_id", "final_grade"])
     
-    is_header = True
     for row in reader:
-        if is_header:
-            is_header = False
-            continue
-            
-        student_id = row[0]
+        student_id = row[0].strip()
         midterm = float(row[1])
         final_exam = float(row[2])
         
-        # Weighted formula calculation
         final_grade = (midterm * 0.4) + (final_exam * 0.6)
         
-        # Accumulate totals for the average
         total_final_grades += final_grade
         student_count += 1
         
