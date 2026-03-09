@@ -20,12 +20,10 @@ def calculate_order_total(products_file, order_file, output_file):
     p_file = open(products_file, 'r')
     p_reader = csv.reader(p_file)
     
-    is_header = True
+    next(p_reader)
+
     for row in p_reader:
-        if is_header:
-            is_header = False
-            continue
-        pid = row[0]
+        pid = row[0].strip()
         price = float(row[2])
         prices[pid] = price
     p_file.close()
@@ -36,14 +34,11 @@ def calculate_order_total(products_file, order_file, output_file):
     o_reader = csv.reader(o_file)
     out_writer = csv.writer(out_file)
     
+    next(o_reader)
     out_writer.writerow(["product_id", "total_cost"])
     
-    is_header = True
     for row in o_reader:
-        if is_header:
-            is_header = False
-            continue
-        pid = row[0]
+        pid = row[0].strip()
         quantity = int(row[1])
         
         item_total = prices[pid] * quantity
