@@ -13,4 +13,17 @@ def compare_averages(filename):
     }
 
     best_subject = max(averages, key=averages.get)
-    
+    worst_subject = min(averages, key=averages.get)
+
+    result = {
+        "Math": float(math_avg),
+        "Science": float(science_avg),
+        "English": float(english_avg),
+        "best_subject": best_subject,
+        "worst_subject": worst_subject
+    }
+
+    return result
+
+result = compare_averages("labs/lab09/data/students.csv")
+print(result)
