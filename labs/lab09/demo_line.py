@@ -2,7 +2,7 @@
 Demo: Your First Line Chart
 
 This demonstrates how to create a basic line chart using matplotlib.
-"""
+
 
 import matplotlib.pyplot as plt
 
@@ -20,3 +20,15 @@ plt.title("Math Score Trends")
 
 # Display the chart
 plt.show()
+"""
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [85, 92, 78, 88, 95]
+
+plt.plot(x, y)              # Create line (x=horizontal, y=vertical)
+plt.xlabel("Student Number") # Label x-axis
+plt.ylabel("Math Score")     # Label y-axis
+plt.title("Math Scores")     # Add title
+plt.show()                   # Display (required!)

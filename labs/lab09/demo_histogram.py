@@ -2,7 +2,7 @@
 Demo: Your First Histogram
 
 This demonstrates how to create a basic histogram to show data distribution.
-"""
+
 
 import matplotlib.pyplot as plt
 
@@ -17,4 +17,14 @@ plt.xlabel("Score Range")
 plt.ylabel("Number of Students")
 plt.title("Math Score Distribution")
 
+plt.show()
+"""
+
+import matplotlib.pyplot as plt
+
+scores = [85, 92, 78, 88, 95, 72, 68, 81, 87, 90]
+plt.hist(scores, bins=10)  # bins=10 is standard
+plt.xlabel("Score Range")
+plt.ylabel("Frequency")
+plt.title("Score Distribution")
 plt.show()
