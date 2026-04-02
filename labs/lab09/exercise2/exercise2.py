@@ -12,4 +12,5 @@ def compare_averages(filename):
         "English": english_avg
     }
 
-    best_subject = max[]
+    best_subject = max(averages, key=averages.get)
+    

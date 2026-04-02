@@ -7,12 +7,12 @@ def explore_data(filename):
     math_average = round(df["Math"].mean(),1)
     highest_score = df["Math"].max()
     top_student = df.loc[df["Math"] == highest_score, "Name"].values[0]
-    
+    print(math_average)
     return {
-        "total subjects": total,
+        "total_students": total,
         "subjects": subject,
-        "math_average": math_average,
-        "top_scorer": top_student
+        "math_average": float(math_average),
+        "highest_math_student": top_student
     }
 
 result = explore_data("labs/lab09/data/students.csv")
