@@ -12,7 +12,7 @@ def compare_subject_distributions(filename):
     plt.ylabel("Frequency")
     plt.title("Score Distributions Comparison")
     plt.legend()
-    plt.show()
+    #plt.show()
 
     return len(df)
 
