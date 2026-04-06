@@ -8,7 +8,7 @@ def show_science_distribution(filename):
     plt.xlabel("Science Score")
     plt.ylabel("Frequency")
     plt.title("Science Score Distribution")
-    plt.show()
+    #plt.show()
 
     return len(df)
 
