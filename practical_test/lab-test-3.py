@@ -38,5 +38,5 @@ def add_bmi_record(filename):
     print (verify_file)
     verify_file.close()
 
-average_height('bmi.csv')
-add_bmi_record('bmi.csv')
+average_height('practical_test/data/bmi.csv')
+add_bmi_record('practical_test/data/bmi.csv')
